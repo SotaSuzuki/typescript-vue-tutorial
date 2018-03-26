@@ -6,11 +6,14 @@
   "author": "SotaSuzuki <3.3sota.suzuki@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server"
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:watch": "cross-env NODE_ENV=production webpack --watch",
+    "start": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "devDependencies": {
+    "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
