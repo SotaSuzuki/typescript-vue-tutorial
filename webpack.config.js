@@ -10,7 +10,7 @@ module.exports = {
   mode: MODE.DEV,
 
   entry: {
-    index: './src/index.js'
+    index: './src/index.ts'
   },
 
   output: {
@@ -28,7 +28,7 @@ module.exports = {
         }
       },
       {
-        test: /\.tsx$/,
+        test: /\.tsx?$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
@@ -53,7 +53,6 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: 'dist',
     historyApiFallback: true,
     // noInfo: true,
     // open: true
